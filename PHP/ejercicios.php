@@ -28,15 +28,15 @@ function findLargestNumber($numbers) {
         return "El array no puede estar vacio";
     } else {
         //Inicializo la variable con la primera posicion del array
-        $mayor=$numbers[0];
+        $max=$numbers[0];
         for($i=1;$i<count($numbers);$i++){
             //Recorriendo el bucle compruebo si la posicion actual es mayor al número guardado, si es así asigno ese valor a la variable
-            if($numbers[$i]>$mayor){
-                $mayor = $numbers[$i];
+            if($numbers[$i]>$max){
+                $max = $numbers[$i];
             }
         }
 
-        return $mayor;
+        return $max;
     }
 }
 
@@ -50,7 +50,7 @@ class Person{
     /**
 	 * TODO: Constructor de persona
 	 * @param string name	El nombre de la persona
-	 * @param int edad		La edad de la persona
+	 * @param int age		La edad de la persona
 	 * @param string email	El email de la persona
 	 */
     public function __construct($name, $age, $email){
@@ -92,13 +92,13 @@ class Person{
 
     //Funcion que comprueba si el atributo age y devuelve true si este es mayor o igual a 18, si no devuelve false
     public function isAdult(){
-        $adulto = false;
+        $adult = false;
         if($this -> age >= 18){
-            $adulto = true;
+            $adult = true;
         } 
         
         //Uso var_export para que devuelve true o false en vez de 1 o nada si es false
-        return var_export($adulto);
+        return var_export($adult);
     }
 }
 
@@ -107,26 +107,26 @@ class Person{
 //@return Cadena con la parte del día según la hora actual
 function getPartOfDay() {
     //Se guarda en una varible la hora actual del sistema y se le da formato 12h mostrando horas y minutos
-    $horaActual = new DateTime("now");
-    $horaActual = $horaActual -> format("h:i A");
+    $currentTime = new DateTime("now");
+    $currentTime = $currentTime -> format("h:i A");
 
     //Se transforman las horas a formato UNIX para poder compararlas
-    $horaActual = strtotime($horaActual);
-    $manana = strtotime("06:00 AM");
-    $tarde = strtotime("12:00 PM");
-    $noche = strtotime("06:00 PM");
+    $currentTime = strtotime($currentTime);
+    $morning = strtotime("06:00 AM");
+    $afternoon = strtotime("12:00 PM");
+    $night = strtotime("06:00 PM");
 
     
-    if ($horaActual >= $manana && $horaActual < $tarde) {
+    if ($currentTime >= $morning && $currentTime < $afternoon) {
         return "Mañana";
-    } elseif ($horaActual >= $tarde && $horaActual < $noche) {
+    } elseif ($currentTime >= $afternoon && $currentTime < $night) {
         return "Tarde";
     } else {
         return "Noche";
     }
 }
 
-echo getPartOfDay();
+
 
 
 
