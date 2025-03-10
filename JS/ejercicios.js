@@ -16,3 +16,14 @@ function arrayPairFilter(numbers){
     return pairNumbers;
 }
 
+function reverseSentence(sentence){
+    let reverseSentence = "";
+
+    for (let i=sentence.length-1;i>=0;i--){
+        reverseSentence+=sentence[i];
+        console.log(sentence.length)
+    }
+
+    return reverseSentence;
+}
+
