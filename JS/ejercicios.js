@@ -32,10 +32,12 @@ function reverseSentence(sentence){
 }
 
 //Ejercicio 3
-
+//TODO: Función que recibe un Array por parametro y muestra los valores mientras que no encuentre uno en específico
+//@param Array Array que contiene los valores a mostrar
 function specificValue(yearMonths){
     let i=0;
     do{
+        //Voy mostrando los valores mientras que el siguiente no sea Julio
         console.log(yearMonths[i]);
         i++;
 
