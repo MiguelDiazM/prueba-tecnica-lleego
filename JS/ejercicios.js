@@ -43,3 +43,17 @@ function specificValue(yearMonths){
 
     } while(yearMonths[i] != "Julio")
 }
+
+//Ejercicio 4
+function vowelCount(sentence){
+    let count=0;
+    let vowels = ["a","e","i","o","u"];
+    
+    for(let i=0;i<sentence.length;i++){
+        if(vowels.includes(sentence[i].toLowerCase())){
+            count++;
+        }
+    }
+
+    return count;
+}
