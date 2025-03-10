@@ -20,6 +20,24 @@ function reverseLettersInWords($sentence){
     }
 }
 
+//Ejercicio 2
+
+function findLargestNumber($numbers) {
+    if(count($numbers)===0){
+        return "El array no puede estar vacio";
+    } else {
+        $mayor=0;
+        for($i=0;$i<count($numbers);$i++){
+            if($numbers[$i]>$mayor){
+                $mayor = $numbers[$i];
+            }
+        }
+
+        return $mayor;
+    }
+}
+
+
 
 
 ?>
