@@ -75,6 +75,30 @@ class Person{
     }
 }
 
+//Ejercicio 4
+
+function getPartOfDay() {
+   
+    $horaActual = new DateTime("now");
+    $horaActual = $horaActual -> format("h:i A");
+
+    
+    $horaActual = strtotime($horaActual);
+    $manana = strtotime("06:00 AM");
+    $tarde = strtotime("12:00 PM");
+    $noche = strtotime("06:00 PM");
+
+    
+    if ($horaActual >= $manana && $horaActual < $tarde) {
+        return "Mañana";
+    } elseif ($horaActual >= $tarde && $horaActual < $noche) {
+        return "Tarde";
+    } else {
+        return "Noche";
+    }
+}
+
+echo getPartOfDay();
 
 
 
