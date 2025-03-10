@@ -76,13 +76,14 @@ class Person{
 }
 
 //Ejercicio 4
-
+//TODO: Funcion que comprueba la hora del día y devuelve mañana, tarde o noche
+//@return Cadena con la parte del día según la hora actual
 function getPartOfDay() {
-   
+    //Se guarda en una varible la hora actual del sistema y se le da formato 12h mostrando horas y minutos
     $horaActual = new DateTime("now");
     $horaActual = $horaActual -> format("h:i A");
 
-    
+    //Se transforman las horas a formato UNIX para poder compararlas
     $horaActual = strtotime($horaActual);
     $manana = strtotime("06:00 AM");
     $tarde = strtotime("12:00 PM");
