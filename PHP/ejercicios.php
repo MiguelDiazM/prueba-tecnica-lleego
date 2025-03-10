@@ -59,6 +59,31 @@ class Person{
         $this -> email = $email;    
     }
 
+    //Creo getters y setters para poder acceder a los valores de los atributos privados de la clase
+    public function setName($name){
+        $this -> name = $name;
+    }
+
+    public function getName(){
+        return $this ->name;
+    }
+
+    public function setAge($age){
+        $this -> age = $age;
+    }
+
+    public function getAge(){
+        return $this -> age;
+    }
+
+    public function setEmail($email){
+        $this -> email = $email;
+    }
+
+    public function getEmail(){
+        return $this -> email;
+    }
+
     //Funcion que devuelve los atributos del objeto
     public function showInformation(){
         $information = "Nombre: $this->name, Edad: $this->age, Email: $this->email";
