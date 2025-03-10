@@ -27,8 +27,10 @@ function findLargestNumber($numbers) {
     if(count($numbers)===0){
         return "El array no puede estar vacio";
     } else {
+        //Inicializo la variable con la primera posicion del array
         $mayor=$numbers[0];
         for($i=1;$i<count($numbers);$i++){
+            //Recorriendo el bucle compruebo si la posicion actual es mayor al número guardado, si es así asigno ese valor a la variable
             if($numbers[$i]>$mayor){
                 $mayor = $numbers[$i];
             }
