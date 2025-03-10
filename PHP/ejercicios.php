@@ -45,17 +45,25 @@ class Person{
     private $age;
     private $email;
 
+    /**
+	 * TODO: Constructor de persona
+	 * @param string name	El nombre de la persona
+	 * @param int edad		La edad de la persona
+	 * @param string email	El email de la persona
+	 */
     public function __construct($name, $age, $email){
         $this -> name = $name;
         $this -> age = $age;
         $this -> email = $email;    
     }
 
+    //Funcion que devuelve los atributos del objeto
     public function showInformation(){
         $information = "Nombre: $this->name, Edad: $this->age, Email: $this->email";
         return $information;
     }
 
+    //Funcion que comprueba si el atributo age y devuelve true si este es mayor o igual a 18, si no devuelve false
     public function isAdult(){
         $adulto = false;
         if($this -> age >= 18){
