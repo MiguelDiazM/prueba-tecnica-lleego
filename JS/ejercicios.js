@@ -31,3 +31,13 @@ function reverseSentence(sentence){
     return reverseSentence;
 }
 
+//Ejercicio 3
+
+function specificValue(yearMonths){
+    let i=0;
+    do{
+        console.log(yearMonths[i]);
+        i++;
+
+    } while(yearMonths[i] != "Julio")
+}
