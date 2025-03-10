@@ -16,12 +16,16 @@ function arrayPairFilter(numbers){
     return pairNumbers;
 }
 
+//Ejercicio 2
+//TODO: Función que recibe una cadena por parametro y devuelve la misma cadena al reves
+//@param String Cadena a la que se le dara la vuelta
+//@return String Cadena al reves 
 function reverseSentence(sentence){
     let reverseSentence = "";
-
+    //Recorro la cadena al reves desde la longitud de la cadena -1 hasta la primera letra
     for (let i=sentence.length-1;i>=0;i--){
+        //Voy concatenando cada letra en la cadena al reves
         reverseSentence+=sentence[i];
-        console.log(sentence.length)
     }
 
     return reverseSentence;
