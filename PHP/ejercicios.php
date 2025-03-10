@@ -70,6 +70,7 @@ class Person{
             $adulto = true;
         } 
         
+        //Uso var_export para que devuelve true o false en vez de 1 o nada si es false
         return var_export($adulto);
     }
 }
