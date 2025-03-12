@@ -45,10 +45,15 @@ function specificValue(yearMonths){
 }
 
 //Ejercicio 4
+//TODO: Función que recibe un Array por parametro y devuelve el número de vocales encontradas
+//@param String que contiene la frase para buscar las vocales
+//@return int que contiene el total de vocales encontradas
 function vowelCount(sentence){
     let count=0;
+    //Declaro un array con las vocales 
     let vowels = ["a","e","i","o","u"];
     
+    //Recorro la cadena y compruebo en cada iteración si la letra esta en el array de vocales   
     for(let i=0;i<sentence.length;i++){
         if(vowels.includes(sentence[i].toLowerCase())){
             count++;
